@@ -21,12 +21,23 @@ The proposed project aims to build on the strengths of OpenCV-based techniques, 
 
 **Tools and Techniques** 
 
-- **OpenCV:** An open-source computer vision and machine learning library, OpenCV will be used to process images captured from the webcam in real-time. It provides extensive functionalities for image processing, object detection, and gesture recognition. 
-- **Mathematical Algorithms:** Instead of relying on pre-trained models, this project will implement mathematical techniques to detect and interpret hand gestures. Key steps will include: 
-  - Contour Detection: Identifying the outline of the hand to distinguish its shape and position. 
-  - Convex Hull and Defects: Using geometric methods to identify fingertips and interpret gestures. 
-  - Gesture Mapping: Translating  specific hand gestures into mouse actions  (e.g., moving the cursor, clicking, dragging). 
-- **Webcam:** The project will use a standard webcam to capture real-time video feed, which will be processed to detect hand gestures. 
+1. **OpenCV (Open Source Computer Vision Library)**: OpenCV is a highly optimized library focused on real-time image processing. It provides tools for capturing video from the webcam, converting images from one color space to another, detecting edges, shapes, and contours, and more. In this project, OpenCV is utilized to:
+   - Capture video frames from the webcam.
+   - Convert the color space of video frames for further processing.
+   - Draw shapes and annotations on the video feed to visualize hand tracking and gestures.
+
+2. **Mediapipe**: Developed by Google, Mediapipe is a versatile and comprehensive framework for building multimodal machine learning pipelines. It provides ready-to-use solutions for real-time hand tracking by detecting 21 3D landmarks on a hand. In this project, Mediapipe is used to:
+   - Detect hand landmarks in real-time.
+   - Track the movement and positions of hand landmarks.
+   - Facilitate the identification of specific gestures such as clicks and drags.
+
+3. **PyAutoGUI**: PyAutoGUI is a cross-platform GUI automation Python module that allows for programmatically controlling the mouse and keyboard. It simulates mouse movements, clicks, and drags. This project uses PyAutoGUI to:
+   - Move the mouse cursor to a specific screen position based on hand gestures.
+   - Perform mouse click actions when specific gestures are detected (e.g., thumb and index finger coming together).
+
+4. **NumPy (Numerical Python)**: NumPy is a foundational package for scientific computing in Python. It provides support for arrays, matrices, and many mathematical functions. In this project, NumPy is used to:
+   - Perform mathematical operations to translate hand landmark coordinates to screen coordinates.
+   - Smooth the movement of the cursor  to create a more natural and less jittery motion.  
 
 **Benefits:** 
 
